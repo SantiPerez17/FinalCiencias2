@@ -1,0 +1,270 @@
+{
+    "mesas_pergamino": [
+        {
+            "nombre": "Escuela Nº 16",
+            "nombre_calle": "Florida",
+            "numero": "1111",
+            "latitud": "-33.8950471",
+            "longitud": "-60.5799205"
+        },
+        {
+            "nombre": "Escuela Media Nº 5",
+            "nombre_calle": "Estrada",
+            "numero": "1225",
+            "latitud": "-33.89813848163265",
+            "longitud": "-60.58023904897959"
+        },
+        {
+            "nombre": "Colegio del Huerto",
+            "nombre_calle": "11 de Septiembre",
+            "numero": "600",
+            "latitud": "-33.8980881",
+            "longitud": "-60.5749191"
+        },
+        {
+            "nombre": "Escuela Nº 1",
+            "nombre_calle": "Merced",
+            "numero": "618",
+            "latitud": "-33.8947132",
+            "longitud": "-60.5742092"
+        },
+        {
+            "nombre": "Escuela Nº 2",
+            "nombre_calle": "Florida",
+            "numero": "425",
+            "latitud": "-33.898001300000004",
+            "longitud": "-60.57233982838983"
+        },
+        {
+            "nombre": "Escuela Nº 22",
+            "nombre_calle": "Avenida de Mayo",
+            "numero": "1165",
+            "latitud": "-33.890641450000004",
+            "longitud": "-60.578296484014615"
+        },
+        {
+            "nombre": "Escuela Técnica Nº 2",
+            "nombre_calle": "Florida",
+            "numero": "545",
+            "latitud": "-33.89773182857143",
+            "longitud": "-60.573747516326534"
+        },
+        {
+            "nombre": "Escuela Nº 4",
+            "nombre_calle": "España",
+            "numero": "649",
+            "latitud": "-33.8878194",
+            "longitud": "-60.5700007"
+        },
+        {
+            "nombre": "Escuela Nº 8",
+            "nombre_calle": "Avenida Monseñor Scalabrini",
+            "numero": "1049",
+            "latitud": "-33.88325202448979",
+            "longitud": "-60.559743840816324"
+        },
+        {
+            "nombre": "Escuela Nº 10",
+            "nombre_calle": "Boulevard Ameghino",
+            "numero": "131",
+            "latitud": "-33.886063",
+            "longitud": "-60.57759584260178"
+        },
+        {
+            "nombre": "Jardín de Infantes Nº 923",
+            "nombre_calle": "El Socorro",
+            "numero": "1201",
+            "latitud": "-33.8773642",
+            "longitud": "-60.5716319"
+        },
+        {
+            "nombre": "Colegio Maristas",
+            "nombre_calle": "Avenida Juan Manuel de Rosas",
+            "numero": "1375",
+            "latitud": "-33.8669451",
+            "longitud": "-60.5689655"
+        },
+        {
+            "nombre": "Escuela Monseñor Scalabrini",
+            "nombre_calle": "Avenida Champagnat",
+            "numero": "251",
+            "latitud": "-33.87481160939598",
+            "longitud": "-60.559138489932884"
+        },
+        {
+            "nombre": "Escuela Nº 64",
+            "nombre_calle": "Juan José Paso",
+            "numero": "1521",
+            "latitud": "-33.875771702040815",
+            "longitud": "-60.5706052877551"
+        },
+        {
+            "nombre": "Instituto Nº 5",
+            "nombre_calle": "Scalabrini Ortiz",
+            "numero": "472",
+            "latitud": "-33.900260144",
+            "longitud": "-60.548583832"
+        },
+        {
+            "nombre": "Escuela Nº 62",
+            "nombre_calle": "Estanislao Zeballos",
+            "numero": "941",
+            "latitud": "-33.90081445",
+            "longitud": "-60.55811620347327"
+        },
+        {
+            "nombre": "Escuela Nº 50",
+            "nombre_calle": "General Mosconi",
+            "numero": "1920",
+            "latitud": "-33.90096575",
+            "longitud": "-60.54822435572653"
+        },
+        {
+            "nombre": "Escuela Nº 52",
+            "nombre_calle": "Lucio V. Mansilla",
+            "numero": "808",
+            "latitud": "-33.89180931428571",
+            "longitud": "-60.539588800000004"
+        },
+        {
+            "nombre": "Escuela Nº 5",
+            "nombre_calle": "Doctor Schumacher",
+            "numero": "1500",
+            "latitud": "-33.9095443",
+            "longitud": "-60.55453433112854"
+        },
+        {
+            "nombre": "Escuela Media Nº 2",
+            "nombre_calle": "Raúl Scalabrini Ortiz",
+            "numero": "658",
+            "latitud": "-33.9017281",
+            "longitud": "-60.5484376"
+        },
+        {
+            "nombre": "Jardín 917",
+            "nombre_calle": "Doctor Schumacher",
+            "numero": "1418",
+            "latitud": "-33.9096494",
+            "longitud": "-60.5549018"
+        },
+        {
+            "nombre": "Escuela Nº 6",
+            "nombre_calle": "Boulevard Rocha",
+            "numero": "698",
+            "latitud": "-33.898049673737376",
+            "longitud": "-60.56689079090909"
+        },
+        {
+            "nombre": "Escuela Nº 17",
+            "nombre_calle": "Castelli",
+            "numero": "1579",
+            "latitud": "-33.8956965",
+            "longitud": "-60.585520947977116"
+        },
+        {
+            "nombre": "Escuela Nº 41",
+            "nombre_calle": "Boulevard Almafuerte",
+            "numero": "1370",
+            "latitud": "-33.874384493939395",
+            "longitud": "-60.57925717878788"
+        },
+        {
+            "nombre": "Escuela Nº 11",
+            "nombre_calle": "Julio Di Gangi",
+            "numero": "1602",
+            "latitud": "-33.8641159",
+            "longitud": "-60.5701563"
+        },
+        {
+            "nombre": "Escuela Normal",
+            "nombre_calle": "Pasaje Joaquín Víctor González",
+            "numero": "725",
+            "latitud": "-33.893016957142855",
+            "longitud": "-60.581488436734695"
+        },
+        {
+            "nombre": "Colegio Industrial",
+            "nombre_calle": "Avenida de Mayo",
+            "numero": "1415",
+            "latitud": "-33.8897665",
+            "longitud": "-60.5814608"
+        },
+        {
+            "nombre": "Escuela Nº 18",
+            "nombre_calle": "Las Golondrinas",
+            "numero": "2842",
+            "latitud": "-33.884306128571424",
+            "longitud": "-60.59422499387755"
+        },
+        {
+            "nombre": "Escuela de Artes Visuales",
+            "nombre_calle": "San Nicolás",
+            "numero": "1892",
+            "latitud": "-33.9064676",
+            "longitud": "-60.57878043526364"
+        },
+        {
+            "nombre": "Escuela Nº 14",
+            "nombre_calle": "Magallanes",
+            "numero": "587",
+            "latitud": "-33.90856415306123",
+            "longitud": "-60.57985794489796"
+        },
+        {
+            "nombre": "Colegio Santa Julia",
+            "nombre_calle": "Alberdi",
+            "numero": "2965",
+            "latitud": "-33.91240195",
+            "longitud": "-60.59644619689276"
+        },
+        {
+            "nombre": "Escuela Nº 48",
+            "nombre_calle": "Sebastián El Cano",
+            "numero": "1355",
+            "latitud": "-33.920558695918366",
+            "longitud": "-60.594985587755104"
+        },
+        {
+            "nombre": "Escuela Nº 53",
+            "nombre_calle": "Balboa",
+            "numero": "586",
+            "latitud": "-33.90819595",
+            "longitud": "-60.57947038081461"
+        },
+        {
+            "nombre": "Unnoba",
+            "nombre_calle": "Monteagudo",
+            "numero": "2772",
+            "latitud": "-33.91319165",
+            "longitud": "-60.58897948990334"
+        },
+        {
+            "nombre": "Escuela Nº 42",
+            "nombre_calle": "Barrancas del Paraná",
+            "numero": "2210",
+            "latitud": "-33.905436032653064",
+            "longitud": "-60.593771100000005"
+        },
+        {
+            "nombre": "Colegio San Pablo",
+            "nombre_calle": "Gualberto Alvarez",
+            "numero": "401",
+            "latitud": "-33.9197628",
+            "longitud": "-60.5843765"
+        },
+        {
+            "nombre": "Escuela Nº 502",
+            "nombre_calle": "Avenida Presidente Juan D. Perón",
+            "numero": "1500",
+            "latitud": "-33.9053091",
+            "longitud": "-60.5701553"
+        },
+        {
+            "nombre": "Escuela Nº 503",
+            "nombre_calle": "Bartolomé Mitre",
+            "numero": "600",
+            "latitud": "-33.886144",
+            "longitud": "-60.5982226"
+        }
+    ]
+}

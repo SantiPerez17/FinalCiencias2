@@ -1,0 +1,382 @@
+{
+    "calculo_temporal": [
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Escuela Primaria N\u00b0 17",
+            "latituddestino": -33.8957858,
+            "longituddestino": -60.5857257,
+            "distancia": 0.208371043440602
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Escuela de Educaci\u00f3n Secundaria N\u00ba 5 \"Ex Nacional\"",
+            "latituddestino": -33.8981115,
+            "longituddestino": -60.5803035,
+            "distancia": 0.49713654773871063
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Escuela Primaria N\u00b016",
+            "latituddestino": -33.8950982,
+            "longituddestino": -60.5799053,
+            "distancia": 0.6028332991823209
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Escuela Normal Superior Joaquin V. Gonzalez",
+            "latituddestino": -33.8929668,
+            "longituddestino": -60.5815007,
+            "distancia": 0.6478830117922241
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Escuela Tecnica 2 Pergamino",
+            "latituddestino": -33.890985,
+            "longituddestino": -60.582515,
+            "distancia": 0.7969404199731365
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Colegio Nuestra Sra. del Huerto",
+            "latituddestino": -33.8980204,
+            "longituddestino": -60.5754345,
+            "distancia": 0.9448262474699585
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "escuela primaria 64",
+            "latituddestino": -33.9062283,
+            "longituddestino": -60.5861707,
+            "distancia": 0.9540210680696952
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "E.E.S.T N1 \"Bme Mitre\"",
+            "latituddestino": -33.8897056,
+            "longituddestino": -60.5814208,
+            "distancia": 0.9671503875407566
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Escuela 22",
+            "latituddestino": -33.8904988,
+            "longituddestino": -60.5783504,
+            "distancia": 1.0437219734697527
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Escuela Primaria N\u00b01 \"Pte. Julio A. Roca\"",
+            "latituddestino": -33.8947051,
+            "longituddestino": -60.5742105,
+            "distancia": 1.1068205802624806
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Escuela Primaria N\u00b042",
+            "latituddestino": -33.9051966,
+            "longituddestino": -60.5938482,
+            "distancia": 1.1283928739836897
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "escuela especial 503",
+            "latituddestino": -33.8945864,
+            "longituddestino": -60.5739833,
+            "distancia": 1.1307814950821764
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Escuela de Arte \u201cEmilio Pettoruti'",
+            "latituddestino": -33.9064941,
+            "longituddestino": -60.5789413,
+            "distancia": 1.1618507914460654
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "EPB N\u00b0 2",
+            "latituddestino": -33.8981062,
+            "longituddestino": -60.5723621,
+            "distancia": 1.228546471050823
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Escuela Primaria N\u00b053",
+            "latituddestino": -33.9077478,
+            "longituddestino": -60.5794365,
+            "distancia": 1.2604078478615544
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Secundaria N\u00b014 (ex ESB 15)",
+            "latituddestino": -33.9085372,
+            "longituddestino": -60.5799537,
+            "distancia": 1.3193556039412053
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "escuela 10",
+            "latituddestino": -33.8856755,
+            "longituddestino": -60.5776714,
+            "distancia": 1.5230150026805502
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Escuela 502",
+            "latituddestino": -33.9055223,
+            "longituddestino": -60.5702683,
+            "distancia": 1.6682244105075135
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Escuela Primaria N\u00b018",
+            "latituddestino": -33.8842201,
+            "longituddestino": -60.5946081,
+            "distancia": 1.707302795783667
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "ESCUELA PRIMARIA N\u00b0 6 \" JUAN BAUTISTA ALBERDI\"",
+            "latituddestino": -33.8976076,
+            "longituddestino": -60.5665618,
+            "distancia": 1.7628960477062234
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "UNNOBA",
+            "latituddestino": -33.913309447379454,
+            "longituddestino": -60.58938228481149,
+            "distancia": 1.7737963971545676
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "EGB N\u00b04",
+            "latituddestino": -33.8878672,
+            "longituddestino": -60.5698937,
+            "distancia": 1.817639638449339
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Colegio Parroquial Santa Julia",
+            "latituddestino": -33.9125346,
+            "longituddestino": -60.59651,
+            "distancia": 1.9334614994677541
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Colegio San Pablo",
+            "latituddestino": -33.91987,
+            "longituddestino": -60.584343,
+            "distancia": 2.4727545738762804
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "ESB N\u00b018",
+            "latituddestino": -33.9008781,
+            "longituddestino": -60.5584333,
+            "distancia": 2.5384297897227373
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Escuela Primaria N\u00b062",
+            "latituddestino": -33.9007146,
+            "longituddestino": -60.5580217,
+            "distancia": 2.5735831875869706
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Jardin De Infante N 923",
+            "latituddestino": -33.8772598,
+            "longituddestino": -60.5724489,
+            "distancia": 2.5754118684591063
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Escuela Primaria N\u00b041",
+            "latituddestino": -33.8741189,
+            "longituddestino": -60.5789895,
+            "distancia": 2.68903558913507
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Escuela Primaria N\u00b048",
+            "latituddestino": -33.9207707,
+            "longituddestino": -60.5942574,
+            "distancia": 2.689533655602173
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Escuela Primaria N\u00b08",
+            "latituddestino": -33.8832444,
+            "longituddestino": -60.5597095,
+            "distancia": 2.8822936779098467
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Jard\u00edn de Infantes 917",
+            "latituddestino": -33.9096493,
+            "longituddestino": -60.5549018,
+            "distancia": 3.136350822626599
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Escuela Primaria N* 5",
+            "latituddestino": -33.9098183,
+            "longituddestino": -60.5543633,
+            "distancia": 3.189323136064427
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Escuela Primaria N* 5",
+            "latituddestino": -33.9098183,
+            "longituddestino": -60.5543633,
+            "distancia": 3.189323136064427
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Instituto Superior de Formaci\u00f3n Docente y T\u00e9cnica N\u00ba 5 \"Regi\u00f3n de la Norpampa\"",
+            "latituddestino": -33.9002828,
+            "longituddestino": -60.5487357,
+            "distancia": 3.420573535289004
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Escuela Primaria N\u00b050",
+            "latituddestino": -33.9013418,
+            "longituddestino": -60.5485079,
+            "distancia": 3.453477387119355
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Escuela Primaria N\u00b050",
+            "latituddestino": -33.9013418,
+            "longituddestino": -60.5485079,
+            "distancia": 3.453477387119355
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Escuela Media n\u00b0 2",
+            "latituddestino": -33.9019678,
+            "longituddestino": -60.5484361,
+            "distancia": 3.468971978078732
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Escuela Artes Y Oficios Monse\u00f1or Scalabrini",
+            "latituddestino": -33.875668,
+            "longituddestino": -60.5586285,
+            "distancia": 3.4937874351531755
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Colegio San Jose Hermanos Maristas",
+            "latituddestino": -33.8671401,
+            "longituddestino": -60.5688517,
+            "distancia": 3.7315291585281454
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Escuela Primaria N\u00b011 \"Juan Jos\u00e9 Paso\"",
+            "latituddestino": -33.8639491,
+            "longituddestino": -60.5701995,
+            "distancia": 4.010964801930748
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Escuela Primaria N\u00b052",
+            "latituddestino": -33.8918342,
+            "longituddestino": -60.5396361,
+            "distancia": 4.297251266718575
+        },
+        {
+            "origen": "larrea 1493",
+            "latitudorigen": -33.89765898163265,
+            "longitudorigen": -60.58566219183673,
+            "destino": "Escuela Primaria N\u00b052",
+            "latituddestino": -33.8918342,
+            "longituddestino": -60.5396361,
+            "distancia": 4.297251266718575
+        }
+    ]
+}
