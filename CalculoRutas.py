@@ -6,7 +6,6 @@ import json
 import os
 from haversine import haversine
 import webbrowser
-from models.Direccion import Direccion
 
 os.system('cls')
 
@@ -14,12 +13,14 @@ ciudad = input('\n  --  Ingrese Ciudad: ')
 nombrecalle = input('\n  --  Ingrese Nombre de Calle: ')
 numerocalle = input('\n  --  Ingrese Número de Calle: ')
 
-client = openrouteservice.Client(key='5b3ce3597851110001cf6248387fae09018f4103abd7a121e451863f') #Inicializamos el cliente de ORS
+# Inicializamos el cliente de ORS
+client = openrouteservice.Client(
+    key='5b3ce3597851110001cf6248387fae09018f4103abd7a121e451863f')
 
 url = "https://nominatim.openstreetmap.org/?addressdetails=1&q=" + \
-        numerocalle+","+nombrecalle+","+ciudad+"&format=json&limit=1"
+    numerocalle+","+nombrecalle+","+ciudad+"&format=json&limit=1"
 
-res=requests.get(url)
+res = requests.get(url)
 
 if res.json() == []:
     print('')
@@ -76,7 +77,6 @@ def armar_json_distancias(resultado):
         sys.exit('')
 
 
-
 armar_json_distancias(resultado)
 
 
@@ -85,12 +85,14 @@ def calc_Tiempo_Distancia(n):
         calculo_distancias = json.load(file)
     for i in range(0, n):
         datos = calculo_distancias['calculo_temporal'][i]
-        coords = ((str(datos['longitudorigen']),str(datos['latitudorigen'])),
-            (str(datos['longituddestino']),str(datos['latituddestino'])))
-        
-        distydurauto = client.directions(coords,profile='driving-car')['routes'][0]['summary']
-        distydurcaminando = client.directions(coords,profile='foot-walking')['routes'][0]['summary']
-        
+        coords = ((str(datos['longitudorigen']), str(datos['latitudorigen'])),
+                  (str(datos['longituddestino']), str(datos['latituddestino'])))
+
+        distydurauto = client.directions(
+            coords, profile='driving-car')['routes'][0]['summary']
+        distydurcaminando = client.directions(
+            coords, profile='foot-walking')['routes'][0]['summary']
+
         origen = datos['origen']
         destino = datos['destino']
         duracionauto = distydurauto['duration']
@@ -98,21 +100,17 @@ def calc_Tiempo_Distancia(n):
         duracioncaminando = distydurcaminando['duration']
         distanciacaminando = distydurcaminando['distance']
 
-        
         print(
             f'\nOrigen {origen.capitalize()} --> Destino {destino.capitalize()} \nAuto : [tiempo {round(duracionauto/60,3)} y distancia {round(distanciaauto/1000,3)}] \nCaminando : [tiempo {round(duracioncaminando/60,3)} y distancia {round(distanciacaminando/1000,3)}] ')
 
-        # webbrowser.open('https://www.google.com.ar/maps/dir/' +
-        #                str(datos['origen'])+' '+ciudad+'/'+str(datos['destino'])+' '+ciudad)
+        webbrowser.open('https://www.google.com.ar/maps/dir/' +
+                        str(datos['origen'])+' '+ciudad+'/'+str(datos['destino'])+' '+ciudad)
         with open('data_temporal.json', 'r+') as f:
             f.truncate()
 
 
 if os.stat('data_temporal.json').st_size != 0:
     start_time = time()
-    # Take the original function's return value.
-    calc_Tiempo_Distancia(2)
-        # Calculate the elapsed time.
+    calc_Tiempo_Distancia(1)
     elapsed_time = time() - start_time
     print("Elapsed time: %0.10f seconds." % elapsed_time)
-    
