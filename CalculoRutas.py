@@ -7,31 +7,53 @@ import os
 from haversine import haversine
 import webbrowser
 
-os.system('cls')
-#Pedido de datos al usuario
-ciudad = input('\n  --  Ingrese Ciudad: ')
-nombrecalle = input('\n  --  Ingrese Nombre de Calle: ')
-numerocalle = input('\n  --  Ingrese Número de Calle: ')
+ciudad = ""
+nombrecalle = ""
+numerocalle = ""
 
 # Inicializamos el cliente de ORS
-client = openrouteservice.Client(
-    key='5b3ce3597851110001cf6248387fae09018f4103abd7a121e451863f')
-#Asignamos a url la url del API nominatim para saber los datos
-url = "https://nominatim.openstreetmap.org/?addressdetails=1&q=" + \
-    numerocalle+","+nombrecalle+","+ciudad+"&format=json&limit=1"
-#asignamos a res el pedido de tipo get que le hacemos a la API con la url anterior
-res = requests.get(url)
-#Si no encuentra la calle cierra el programa y muestra que no se encontró el domicilio
-if res.json() == []:
-    print('')
-    print('No se encontró el domicilio')
-    sys.exit('')
-else:
-    resultado = res.json()[0] #Si lo encuentra manda la respuesta que se recibió de la peticion en formato JSON
+client = openrouteservice.Client(key='5b3ce3597851110001cf6248387fae09018f4103abd7a121e451863f')
 
-#Inicializamos un diccionario, que tendrá como clave 'calculo_temporal' y valor de la clave una lista vacía 
-distancias_minimas = {}
-distancias_minimas['calculo_temporal'] = []
+def Inicializar(ciu, nom, num):
+    os.system('cls')
+    #Pedido de datos al usuario
+    ciudad = ciu
+    nombrecalle = nom
+    numerocalle = num
+    resultado = ""  
+    r = ""
+
+    #Asignamos a url la url del API nominatim para saber los datos
+    url = "https://nominatim.openstreetmap.org/?addressdetails=1&q=" + \
+        numerocalle+","+nombrecalle+","+ciudad+"&format=json&limit=1"
+    #asignamos a res el pedido de tipo get que le hacemos a la API con la url anterior
+    res = requests.get(url)
+    #Si no encuentra la calle cierra el programa y muestra que no se encontró el domicilio
+    if res.json() == []:
+        print('')
+        print('No se encontró el domicilio')
+        #sys.exit('')
+        return "No se encontró el domicilio"
+    else:
+        resultado = res.json()[0] #Si lo encuentra manda la respuesta que se recibió de la peticion en formato JSON   
+
+    #Inicializamos un diccionario, que tendrá como clave 'calculo_temporal' y valor de la clave una lista vacía 
+    distancias_minimas = {}
+    distancias_minimas['calculo_temporal'] = []
+
+    #Se invoca la funcion que crea el JSON temporal que tiene los datos de origen y destino
+    #y se ordena en base a la distancia de menor a mayor
+    armar_json_distancias(resultado, distancias_minimas)
+
+    #Si data_temporal.json no está vacío iniciamos el programa invocando a la funcion de calcular tiempo y distancia-
+    #Se calcula tambien cuanto tarda en hacerlo
+    if os.stat('data_temporal.json').st_size != 0:
+        start_time = time()
+        r += calc_Tiempo_Distancia(1)
+        elapsed_time = time() - start_time
+        print("Elapsed time: %0.10f seconds." % elapsed_time) 
+        r += "\nElapsed time: %0.10f seconds." % elapsed_time
+        return r  
 
 #Función que devuelve la latitud y longitud de un archivo JSON 
 def coordenadas_Domicilio(resultado):
@@ -40,7 +62,7 @@ def coordenadas_Domicilio(resultado):
     return (la, lo)
 
 #Funcion json_temporal, recibe como parámetro las mesas y un conjunto con latitud y longitud.
-def json_temporal(mesas, latlon):
+def json_temporal(mesas, latlon, resultado, distancias_minimas):
     for i in mesas['features']: #Recorremos las mesas
         a = i['geometry']['coordinates'] #Asignamos a la variable 'a' el valor de las coordenadas
         distancias_minimas['calculo_temporal'].append({ #agregamo a la lista vacía del diccionario los valores en formato JSON a continuación
@@ -62,23 +84,20 @@ def sort_by_key(list):
     return list['distancia']
 
 #Funcion para armar el archivo data_temporal en base a la ciudad elegida.
-def armar_json_distancias(resultado):
+def armar_json_distancias(resultado, distancias_minimas):
     if '2700' in resultado['display_name']: #Caso Pergamino
         with open('Pergamino_Mesas.geojson', encoding='utf-8-sig') as file:
             mesas = json.load(file)
-            json_temporal(mesas, coordenadas_Domicilio(resultado))
+            json_temporal(mesas, coordenadas_Domicilio(resultado), resultado, distancias_minimas)
     elif '6000' in resultado['display_name']: #Caso Junin
         with open('Junin_Mesas.geojson', encoding='utf-8-sig') as file:
             mesas = json.load(file)
-            json_temporal(mesas, coordenadas_Domicilio(resultado))
+            json_temporal(mesas, coordenadas_Domicilio(resultado), resultado, distancias_minimas)
     else: #Caso ciudad no encontrada
         print('')
         print('No se encontró el domicilio')
-        sys.exit('')
-
-#Se invoca la funcion que crea el JSON temporal que tiene los datos de origen y destino
-#y se ordena en base a la distancia de menor a mayor
-armar_json_distancias(resultado)
+        #sys.exit('')
+        return "No se encontró el resultado"
 
 #Funcion que calcula la distancia y el tiempo del recorrido en base a un numero 'n'
 def calc_Tiempo_Distancia(n):
@@ -115,10 +134,5 @@ def calc_Tiempo_Distancia(n):
         with open('data_temporal.json', 'r+') as f:
             f.truncate()
 
-#Si data_temporal.json no está vacío iniciamos el programa invocando a la funcion de calcular tiempo y distancia-
-#Se calcula tambien cuanto tarda en hacerlo
-if os.stat('data_temporal.json').st_size != 0:
-    start_time = time()
-    calc_Tiempo_Distancia(1)
-    elapsed_time = time() - start_time
-    print("Elapsed time: %0.10f seconds." % elapsed_time)
+        return f"\nOrigen {origen.capitalize()} --> Destino {destino.capitalize()} \nAuto : [tiempo {round(duracionauto/60,3)} y distancia {round(distanciaauto/1000,3)}] \nCaminando : [tiempo {round(duracioncaminando/60,3)} y distancia {round(distanciacaminando/1000,3)}] "
+

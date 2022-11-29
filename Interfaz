@@ -1,0 +1,40 @@
+# decodigo.com
+from tkinter import *
+import CalculoRutas
+
+class VentanaEjemplo:
+    def __init__(self, master):       
+        self.master = master
+        master.title("Final Ciencias II")      
+
+        self.miFrame = Frame(root, width=1200, height=600)
+        self.miFrame.pack()
+
+        self.labelCiudad = Label(self.miFrame, text="Ciudad:")
+        self.labelCiudad.grid(row=0,column=0)
+        self.cuadroCiudad = Entry(self.miFrame)
+        self.cuadroCiudad.grid(row=0,column=1)
+
+        self.labelCalle = Label(self.miFrame, text="Calle:")
+        self.labelCalle.grid(row=1,column=0)
+        self.cuadroCalle = Entry(self.miFrame)
+        self.cuadroCalle.grid(row=1,column=1)
+
+        self.labelNumero = Label(self.miFrame, text="Número:")
+        self.labelNumero.grid(row=2,column=0)
+        self.cuadroNumero = Entry(self.miFrame)
+        self.cuadroNumero.grid(row=2,column=1)
+
+        self.botonSaludo = Button(self.miFrame, text="Buscar", command=self.buscar)
+        self.botonSaludo.grid(row=3,column=0)
+        
+
+    def buscar(self):
+        self.labelResultado = Label(self.miFrame, text=CalculoRutas.Inicializar(self.cuadroCiudad.get(),self.cuadroCalle.get(),self.cuadroNumero.get()))
+        self.labelResultado.grid(row=4,column=0)
+        
+root = Tk()
+root.geometry("1200x600")
+
+miVentana = VentanaEjemplo(root)
+root.mainloop()
