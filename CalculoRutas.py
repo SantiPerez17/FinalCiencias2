@@ -20,7 +20,7 @@ def Inicializar(ciu, nom, num):
     ciudad = ciu
     nombrecalle = nom
     numerocalle = num
-    resultado = ""  
+    resultado = {}
     r = ""
 
     #Asignamos a url la url del API nominatim para saber los datos
@@ -37,19 +37,15 @@ def Inicializar(ciu, nom, num):
     else:
         resultado = res.json()[0] #Si lo encuentra manda la respuesta que se recibió de la peticion en formato JSON   
 
-    #Inicializamos un diccionario, que tendrá como clave 'calculo_temporal' y valor de la clave una lista vacía 
-    distancias_minimas = {}
-    distancias_minimas['calculo_temporal'] = []
-
     #Se invoca la funcion que crea el JSON temporal que tiene los datos de origen y destino
     #y se ordena en base a la distancia de menor a mayor
-    armar_json_distancias(resultado, distancias_minimas)
+    armar_json_distancias(resultado)
 
     #Si data_temporal.json no está vacío iniciamos el programa invocando a la funcion de calcular tiempo y distancia-
     #Se calcula tambien cuanto tarda en hacerlo
     if os.stat('data_temporal.json').st_size != 0:
         start_time = time()
-        r += calc_Tiempo_Distancia(1)
+        r += calc_Tiempo_Distancia(1, nombrecalle, numerocalle)
         elapsed_time = time() - start_time
         print("Elapsed time: %0.10f seconds." % elapsed_time) 
         r += "\nElapsed time: %0.10f seconds." % elapsed_time
@@ -62,7 +58,10 @@ def coordenadas_Domicilio(resultado):
     return (la, lo)
 
 #Funcion json_temporal, recibe como parámetro las mesas y un conjunto con latitud y longitud.
-def json_temporal(mesas, latlon, resultado, distancias_minimas):
+def json_temporal(mesas, latlon, resultado):
+    #Inicializamos un diccionario, que tendrá como clave 'calculo_temporal' y valor de la clave una lista vacía 
+    distancias_minimas = {}
+    distancias_minimas['calculo_temporal'] = []
     for i in mesas['features']: #Recorremos las mesas
         a = i['geometry']['coordinates'] #Asignamos a la variable 'a' el valor de las coordenadas
         distancias_minimas['calculo_temporal'].append({ #agregamo a la lista vacía del diccionario los valores en formato JSON a continuación
@@ -84,15 +83,15 @@ def sort_by_key(list):
     return list['distancia']
 
 #Funcion para armar el archivo data_temporal en base a la ciudad elegida.
-def armar_json_distancias(resultado, distancias_minimas):
+def armar_json_distancias(resultado):
     if '2700' in resultado['display_name']: #Caso Pergamino
         with open('Pergamino_Mesas.geojson', encoding='utf-8-sig') as file:
             mesas = json.load(file)
-            json_temporal(mesas, coordenadas_Domicilio(resultado), resultado, distancias_minimas)
+            json_temporal(mesas, coordenadas_Domicilio(resultado), resultado)
     elif '6000' in resultado['display_name']: #Caso Junin
         with open('Junin_Mesas.geojson', encoding='utf-8-sig') as file:
             mesas = json.load(file)
-            json_temporal(mesas, coordenadas_Domicilio(resultado), resultado, distancias_minimas)
+            json_temporal(mesas, coordenadas_Domicilio(resultado), resultado)
     else: #Caso ciudad no encontrada
         print('')
         print('No se encontró el domicilio')
@@ -100,10 +99,11 @@ def armar_json_distancias(resultado, distancias_minimas):
         return "No se encontró el resultado"
 
 #Funcion que calcula la distancia y el tiempo del recorrido en base a un numero 'n'
-def calc_Tiempo_Distancia(n):
+def calc_Tiempo_Distancia(n, nomc, numc):
     with open('data_temporal.json') as file: #Leemos el archivo 'data_temporal.json'
         calculo_distancias = json.load(file)
     for i in range(0, n): #En base al n recibido es la cantidad de rutas que va a calcular
+        calculo_distancias['calculo_temporal'][i]['origen'] = nomc + " " + numc
         datos = calculo_distancias['calculo_temporal'][i] #extrae los datos de cada elemento del archivo JSON
         coords = ((str(datos['longitudorigen']), str(datos['latitudorigen'])),
                   (str(datos['longituddestino']), str(datos['latituddestino']))) #asignamos a coords las coordenadas origen y destino
