@@ -1,0 +1,46 @@
+{
+    "rutas": [
+        {
+            "origen": "francia 1535",
+            "destino": "Escuela Primaria N\u00b0 17",
+            "duracionAuto": 116.8,
+            "distanciaAuto": 594.7,
+            "duracioncaminando": 345.0,
+            "distanciacaminando": 479.2,
+            "ciudad": "pergamino"
+        },
+        {
+            "origen": "larrea 1494",
+            "destino": "Escuela Primaria N\u00b0 17",
+            "duracionAuto": 54.8,
+            "distanciaAuto": 274.9,
+            "duracioncaminando": 198.0,
+            "distanciacaminando": 274.9,
+            "ciudad": "pergamino"
+        },
+        {
+            "origen": "padre ghio 14",
+            "destino": "Siria 153",
+            "duracionAuto": 92.0,
+            "distanciaAuto": 619.6,
+            "duracioncaminando": 257.3,
+            "distanciacaminando": 357.4,
+            "ciudad": "junin"
+        },
+        {
+            "origen": "sargento cabral 14",
+            "destino": "Siria 153",
+            "duracionAuto": 57.1,
+            "distanciaAuto": 475.9,
+            "duracioncaminando": 342.7,
+            "distanciacaminando": 475.9,
+            "ciudad": "junin"
+        }
+    ],
+    "lista": [
+        "francia 1535",
+        "larrea 1494",
+        "padre ghio 14",
+        "sargento cabral 14"
+    ]
+}
