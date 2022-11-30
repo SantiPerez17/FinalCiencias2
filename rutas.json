@@ -35,12 +35,22 @@
             "duracioncaminando": 342.7,
             "distanciacaminando": 475.9,
             "ciudad": "junin"
+        },
+        {
+            "origen": "9 de julio 567",
+            "destino": "Av. Arias 475",
+            "duracionAuto": 122.8,
+            "distanciaAuto": 1290.0,
+            "duracioncaminando": 601.4,
+            "distanciacaminando": 835.3,
+            "ciudad": "Junin"
         }
     ],
     "lista": [
         "francia 1535",
         "larrea 1494",
         "padre ghio 14",
-        "sargento cabral 14"
+        "sargento cabral 14",
+        "9 de julio 567"
     ]
 }

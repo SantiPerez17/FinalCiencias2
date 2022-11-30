@@ -123,6 +123,13 @@ def checkList(origen):
         return True
     else:
         return False
+
+def normalizarDistancia(distancia):
+    if round(distancia/1000,3) >= 1:
+        return str(round(distancia/1000,1)) + " km"
+    else:
+        return str(round(distancia,None)) + " metros"
+
 # Funcion que calcula la distancia y el tiempo del recorrido en base a un numero 'n'
 def calc_Tiempo_Distancia(n,ciudad):
     with open('data_temporal.json') as file:  # Leemos el archivo 'data_temporal.json'
@@ -185,7 +192,7 @@ def calc_Tiempo_Distancia(n,ciudad):
 
         # Muestra en consola de resultados
         print(
-            f'\nOrigen {origen.capitalize()} --> Destino {destino.capitalize()} \nAuto : [tiempo {round(duracionauto/60,3)} y distancia {round(distanciaauto/1000,3)}] \nCaminando : [tiempo {round(duracioncaminando/60,3)} y distancia {round(distanciacaminando/1000,3)}] ')
+            f'\nOrigen {origen.capitalize()} --> Destino {destino.capitalize()} \nAuto : [tiempo {round(duracionauto/60,None)} minutos y distancia {normalizarDistancia(distanciaauto)} ] \nCaminando : [tiempo {round(duracioncaminando/60,None)} minutos y distancia {normalizarDistancia(distanciacaminando)}] ')
 
         # Se abre un navegador para comparar los resultados con el servicio de GoogleMaps
         webbrowser.open('https://www.google.com.ar/maps/dir/' +
@@ -193,4 +200,4 @@ def calc_Tiempo_Distancia(n,ciudad):
         with open('data_temporal.json', 'r+') as f:
             f.truncate()
 
-        return f"\nOrigen {origen.capitalize()} --> Destino {destino.capitalize()} \nAuto : [tiempo {round(duracionauto/60,3)} y distancia {round(distanciaauto/1000,3)}] \nCaminando : [tiempo {round(duracioncaminando/60,3)} y distancia {round(distanciacaminando/1000,3)}] "
+        return f"\nOrigen {origen.capitalize()} --> Destino {destino.capitalize()} \nAuto : [tiempo {round(duracionauto/60,None)} minutos y distancia {normalizarDistancia(distanciaauto)}] \nCaminando : [tiempo {round(duracioncaminando/60,None)} minutos y distancia {normalizarDistancia(distanciacaminando)}] "
