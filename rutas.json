@@ -49,6 +49,46 @@
             "duracioncaminando": 218.7,
             "distanciacaminando": 303.8,
             "ciudad": "pergamino"
+        },
+        {
+            "origen": "francia 1423",
+            "destino": "Escuela Primaria N\u00b0 17",
+            "direccion_a_ir": "Castelli 1579, Pergamino, Provincia de Buenos Aires, Argentina",
+            "duracionAuto": 120.4,
+            "distanciaAuto": 701.6,
+            "duracioncaminando": 271.9,
+            "distanciacaminando": 377.6,
+            "ciudad": "pergamino"
+        },
+        {
+            "origen": "francia 1534",
+            "destino": "Escuela Primaria N\u00b0 17",
+            "direccion_a_ir": "Castelli 1579, Pergamino, Provincia de Buenos Aires, Argentina",
+            "duracionAuto": 117.4,
+            "distanciaAuto": 597.7,
+            "duracioncaminando": 342.9,
+            "distanciacaminando": 476.3,
+            "ciudad": "pergamino"
+        },
+        {
+            "origen": "francia 600",
+            "destino": "Escuela de Educaci\u00f3n Secundaria Tecnica N\u00b0 2",
+            "direccion_a_ir": "Florida 545, Pergamino, Provincia de Buenos Aires",
+            "duracionAuto": 34.1,
+            "distanciaAuto": 157.9,
+            "duracioncaminando": 113.7,
+            "distanciacaminando": 157.9,
+            "ciudad": "pergamino"
+        },
+        {
+            "origen": "padre ghio 134",
+            "destino": "Escuela De Educaci\u00f3n Primaria N\u00ba16 \"General Manuel Belgrano\"",
+            "direccion_a_ir": "Siria/Cabrera y Pres. Quintana 153, Jun\u00edn, Provincia de Buenos Aires",
+            "duracionAuto": 62.4,
+            "distanciaAuto": 376.9,
+            "duracioncaminando": 84.5,
+            "distanciacaminando": 117.3,
+            "ciudad": "junin"
         }
     ],
     "lista": [
@@ -56,6 +96,10 @@
         "merced  904",
         "larrea 1342",
         "larrea 143",
-        "francia 143"
+        "francia 143",
+        "francia 1423",
+        "francia 1534",
+        "francia 600",
+        "padre ghio 134"
     ]
 }

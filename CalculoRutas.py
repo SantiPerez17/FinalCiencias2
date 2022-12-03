@@ -1,4 +1,4 @@
-from time import time
+from time import sleep, time
 import requests
 import openrouteservice
 import json
@@ -25,7 +25,7 @@ def Inicializar(ciu, nom, num):
     nombrecalle = nom
     numerocalle = num
     resultado = {}
-    r = ""
+    r = []
 
     # Asignamos a url la url del API nominatim para saber los datos
     url = "https://nominatim.openstreetmap.org/search?addressdetails=1&q=" + \
@@ -37,7 +37,7 @@ def Inicializar(ciu, nom, num):
         print('')
         print('No se encontró el domicilio')
         # sys.exit('')
-        return "No se encontró el domicilio"
+        return ["No se encontró el domicilio"]
     else:
         # Si lo encuentra manda la respuesta que se recibió de la peticion en formato JSON
         resultado = res.json()[0]
@@ -50,10 +50,10 @@ def Inicializar(ciu, nom, num):
     # Se calcula tambien cuanto tarda en hacerlo
     if os.stat('data_temporal.json').st_size != 0:
         start_time = time()
-        r += calc_Tiempo_Distancia(1, ciudad)
+        r = calc_Tiempo_Distancia(1, ciudad)
         elapsed_time = time() - start_time
         print("Tiempo: %0.10f segundos." % elapsed_time)
-        r += "\nTiempo : %0.10f segundos." % elapsed_time
+        r.append("Tiempo : %0.10f segundos." % elapsed_time)
         return r
 
 # Función que devuelve la latitud y longitud de un archivo JSON
@@ -104,7 +104,7 @@ def armar_json_distancias(resultado,nombrecalle, numerocalle):
         print('')
         print('No se encontró el domicilio')
         # sys.exit('')
-        return "No se encontró el resultado"
+        return ["No se encontró el resultado"]
 
 def checkList(origen):
     with open('rutas.json') as file:  # Leemos el archivo 'data_temporal.json'
@@ -181,10 +181,21 @@ def calc_Tiempo_Distancia(n,ciudad):
         print(
             f'\nOrigen: {origen.capitalize()} --> Destino: {destino.capitalize()} \nDireccion : {dir_destino} \nAuto : [tiempo {round(duracionauto/60,None)} minutos y distancia {normalizarDistancia(distanciaauto)} ] \nCaminando : [tiempo {round(duracioncaminando/60,None)} minutos y distancia {normalizarDistancia(distanciacaminando)}] ')
 
-        # Se abre un navegador para comparar los resultados con el servicio de GoogleMaps
-        webbrowser.open('https://www.google.com.ar/maps/dir/' +
-                        str(datos['origen'])+' '+ciu+'/'+str(datos['destino'])+' '+ciudad)
-        #with open('data_temporal.json', 'r+') as f:
-        #    f.truncate()
+        
+        with open('data_temporal.json', 'r+') as f:
+            f.truncate()
 
-        return f"\nOrigen: {origen.capitalize()} --> Destino: {destino.capitalize()} \nDireccion : {dir_destino} \nAuto : [tiempo {round(duracionauto/60,None)} minutos y distancia {normalizarDistancia(distanciaauto)}] \nCaminando : [tiempo {round(duracioncaminando/60,None)} minutos y distancia {normalizarDistancia(distanciacaminando)}] "
+        #return f"\nOrigen: {origen.capitalize()} --> Destino: {destino.capitalize()} \nDireccion : {dir_destino} \nAuto : [tiempo {round(duracionauto/60,None)} minutos y distancia {normalizarDistancia(distanciaauto)}] \nCaminando : [tiempo {round(duracioncaminando/60,None)} minutos y distancia {normalizarDistancia(distanciacaminando)}] "
+        return [origen,
+                destino,
+                dir_destino,
+                ciudad,
+                str(round(duracionauto/60,None)) + ' minutos.',
+                normalizarDistancia(distanciaauto),
+                str(round(duracioncaminando/60,None)) + " minutos.", 
+                normalizarDistancia(distanciacaminando)]
+
+def abrir_maps(origen,destino, ciu):
+    # Se abre un navegador para comparar los resultados con el servicio de GoogleMaps
+    webbrowser.open('https://www.google.com.ar/maps/dir/' +
+        str(origen)+' '+ciu+'/'+str(destino)+' '+ciu)

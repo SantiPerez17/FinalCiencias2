@@ -3,6 +3,9 @@ from tkinter import *
 import CalculoRutas
 
 
+
+datosMaps = []
+
 class VentanaEjemplo:
     def __init__(self, master):
         self.master = master
@@ -30,10 +33,50 @@ class VentanaEjemplo:
             self.miFrame, text="Buscar", command=self.buscar)
         self.botonSaludo.grid(row=3, column=0)
 
+        self.botonSaludo1 = Button(
+            self.miFrame, text="AbrirMaps", command=self.abrirMaps)
+        self.botonSaludo1.grid(row=4, column=0)
+
     def buscar(self):
-        self.labelResultado = Label(self.miFrame, text=CalculoRutas.Inicializar(
-            self.cuadroCiudad.get(), self.cuadroCalle.get(), self.cuadroNumero.get()))
-        self.labelResultado.grid(row=4, column=0)
+        if not (self.cuadroCalle.get()) or not (self.cuadroNumero.get()) or not (self.cuadroCiudad.get()):
+            self.labelResultado = Label(self.miFrame,text='Complete los campos.')
+            self.botonSaludo.grid(row=3, column=0)
+            self.botonSaludo1.grid(row=4, column=0)
+            self.labelResultado.grid(row=5,column=0)
+        else:
+            r=CalculoRutas.Inicializar(self.cuadroCiudad.get(), self.cuadroCalle.get(), self.cuadroNumero.get())
+            if not r is None:
+                self.botonSaludo.grid(row=3, column=0)
+                self.botonSaludo1.grid(row=4, column=0)
+                print(r)
+                datosMaps.append(r[0])
+                datosMaps.append(r[1])
+                datosMaps.append(r[3])
+                self.labelOrigen = Label(self.miFrame,text = 'Origen: ' + r[0].capitalize())
+                self.labelDestino = Label(self.miFrame,text = 'Destino: ' + r[1])
+                self.labelDireccion = Label(self.miFrame,text = 'Direccion Destino: ' + r[2])
+                self.labelAuto = Label(self.miFrame,text = 'Auto [Duracion: ' + r[4] + ', Distancia: ' + r[5] +']')
+                self.labelCaminando = Label(self.miFrame,text = 'Caminando [Duración: ' + r[6] + ', Distancia: ' + r[7])
+                self.labelTiempoRespuesta = Label(self.miFrame,text = 'Respuesta' + r[8])
+                #self.labelResultado = Label(self.miFrame, text=CalculoRutas.Inicializar(
+                #    self.cuadroCiudad.get(), self.cuadroCalle.get(), self.cuadroNumero.get()))
+                self.labelOrigen.grid(row=5, column=0)
+                self.labelDestino.grid(row=6, column=0)
+                self.labelDireccion.grid(row=7, column=0)
+                self.labelAuto.grid(row=8, column=0)
+                self.labelCaminando.grid(row=9, column=0)
+                self.labelTiempoRespuesta.grid(row=10, column=0)
+
+            else:
+                self.botonSaludo.grid(row=3, column=0)
+                self.botonSaludo1.grid(row=4, column=0)
+                self.labelResultado = Label(self.miFrame,text='No se encontró el domicilio')
+                self.labelResultado.grid(row=4,column=0)
+
+
+    def abrirMaps(self):
+        CalculoRutas.abrir_maps(datosMaps[0],datosMaps[1],datosMaps[2])
+        datosMaps.clear()
 
 
 root = Tk()
