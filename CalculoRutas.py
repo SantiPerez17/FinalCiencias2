@@ -1,4 +1,3 @@
-import sys
 from time import time
 import requests
 import openrouteservice
@@ -7,15 +6,14 @@ import os
 from haversine import haversine
 import webbrowser
 
+#Declaración de 3 variables utilizadas para que el usuario ingrese la información
 ciudad = ""
 nombrecalle = ""
 numerocalle = ""
 
-index = 0
 rutas = {}
 rutas['rutas'] = []
 rutas['lista'] = []
-# Inicializamos el cliente de ORS
 client = openrouteservice.Client(
     key='5b3ce3597851110001cf6248387fae09018f4103abd7a121e451863f')
 
@@ -30,7 +28,7 @@ def Inicializar(ciu, nom, num):
     r = ""
 
     # Asignamos a url la url del API nominatim para saber los datos
-    url = "https://nominatim.openstreetmap.org/?addressdetails=1&q=" + \
+    url = "https://nominatim.openstreetmap.org/search?addressdetails=1&q=" + \
         numerocalle+","+nombrecalle+","+ciudad+"&format=json&limit=1"
     # asignamos a res el pedido de tipo get que le hacemos a la API con la url anterior
     res = requests.get(url)
@@ -59,8 +57,6 @@ def Inicializar(ciu, nom, num):
         return r
 
 # Función que devuelve la latitud y longitud de un archivo JSON
-
-
 def coordenadas_Domicilio(resultado):
     la = float(resultado['lat'])
     lo = float(resultado['lon'])
@@ -81,6 +77,7 @@ def json_temporal(mesas, latlon, resultado, nombrecalle, numerocalle):
             'latitudorigen': float(resultado['lat']),
             'longitudorigen': float(resultado['lon']),
             'destino': i['properties']["Name"],
+            'direccion_destino' : i['properties']["Direccion"],
             'latituddestino': float(a[1]),
             'longituddestino': float(a[0]),
             # Utilizamos la fórmula de Haversine para calcular distancias en la tierra
@@ -92,15 +89,8 @@ def json_temporal(mesas, latlon, resultado, nombrecalle, numerocalle):
     with open('data_temporal.json', 'w') as file:
         json.dump(distancias_minimas, file, indent=4)
 
-# Funcion que ordena por distancia
-
-
-def sort_by_key(list):
-    return list['distancia']
 
 # Funcion para armar el archivo data_temporal en base a la ciudad elegida.
-
-
 def armar_json_distancias(resultado,nombrecalle, numerocalle):
     if '2700' in resultado['display_name']:  # Caso Pergamino
         with open('Pergamino_Mesas.geojson', encoding='utf-8-sig') as file:
@@ -137,9 +127,7 @@ def calc_Tiempo_Distancia(n,ciudad):
     for i in range(0, n):  # En base al n recibido es la cantidad de rutas que va a calcular
         #calculo_distancias['calculo_temporal'][i]['origen'] = nomc + " " + numc
         # extrae los datos de cada elemento del archivo JSON
-
         datos = calculo_distancias['calculo_temporal'][i]
-        
         if not checkList(datos['origen']):
             coords = ((str(datos['longitudorigen']), str(datos['latitudorigen'])),
                   (str(datos['longituddestino']), str(datos['latituddestino'])))  # asignamos a coords las coordenadas origen y destino
@@ -167,37 +155,36 @@ def calc_Tiempo_Distancia(n,ciudad):
         
         origen = datos['origen']
         destino = datos['destino']
+        dir_destino = datos['direccion_destino']
         ciu=ciudad
 
 
-        print(origen not in rutas['lista'])
         with open('rutas.json') as file:  # Leemos el archivo 'data_temporal.json'
                 rutaa = json.load(file)
         if origen not in rutaa['lista']:
-            with open('rutas.json') as file:  # Leemos el archivo 'data_temporal.json'
-                rut = json.load(file)
             nueva={
                 "origen" : origen,
                 "destino" : destino,
+                "direccion_a_ir" : dir_destino,
                 "duracionAuto": duracionauto,
                 "distanciaAuto": distanciaauto,
                 "duracioncaminando" : duracioncaminando,
                 "distanciacaminando" : distanciacaminando,
                 "ciudad": ciu,
             }
-            rut['rutas'].append(nueva)
-            rut['lista'].append(origen)
+            rutaa['rutas'].append(nueva)
+            rutaa['lista'].append(origen)
             with open('rutas.json', 'w') as file:
-                json.dump(rut, file, indent=4)
+                json.dump(rutaa, file, indent=4)
 
         # Muestra en consola de resultados
         print(
-            f'\nOrigen {origen.capitalize()} --> Destino {destino.capitalize()} \nAuto : [tiempo {round(duracionauto/60,None)} minutos y distancia {normalizarDistancia(distanciaauto)} ] \nCaminando : [tiempo {round(duracioncaminando/60,None)} minutos y distancia {normalizarDistancia(distanciacaminando)}] ')
+            f'\nOrigen: {origen.capitalize()} --> Destino: {destino.capitalize()} \nDireccion : {dir_destino} \nAuto : [tiempo {round(duracionauto/60,None)} minutos y distancia {normalizarDistancia(distanciaauto)} ] \nCaminando : [tiempo {round(duracioncaminando/60,None)} minutos y distancia {normalizarDistancia(distanciacaminando)}] ')
 
         # Se abre un navegador para comparar los resultados con el servicio de GoogleMaps
         webbrowser.open('https://www.google.com.ar/maps/dir/' +
                         str(datos['origen'])+' '+ciu+'/'+str(datos['destino'])+' '+ciudad)
-        with open('data_temporal.json', 'r+') as f:
-            f.truncate()
+        #with open('data_temporal.json', 'r+') as f:
+        #    f.truncate()
 
-        return f"\nOrigen {origen.capitalize()} --> Destino {destino.capitalize()} \nAuto : [tiempo {round(duracionauto/60,None)} minutos y distancia {normalizarDistancia(distanciaauto)}] \nCaminando : [tiempo {round(duracioncaminando/60,None)} minutos y distancia {normalizarDistancia(distanciacaminando)}] "
+        return f"\nOrigen: {origen.capitalize()} --> Destino: {destino.capitalize()} \nDireccion : {dir_destino} \nAuto : [tiempo {round(duracionauto/60,None)} minutos y distancia {normalizarDistancia(distanciaauto)}] \nCaminando : [tiempo {round(duracioncaminando/60,None)} minutos y distancia {normalizarDistancia(distanciacaminando)}] "

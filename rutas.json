@@ -3,6 +3,7 @@
         {
             "origen": "francia 1535",
             "destino": "Escuela Primaria N\u00b0 17",
+            "direccion_a_ir": "Castelli 1579, Pergamino, Provincia de Buenos Aires, Argentina",
             "duracionAuto": 116.8,
             "distanciaAuto": 594.7,
             "duracioncaminando": 345.0,
@@ -10,47 +11,51 @@
             "ciudad": "pergamino"
         },
         {
-            "origen": "larrea 1494",
-            "destino": "Escuela Primaria N\u00b0 17",
-            "duracionAuto": 54.8,
-            "distanciaAuto": 274.9,
-            "duracioncaminando": 198.0,
-            "distanciacaminando": 274.9,
+            "origen": "merced  904",
+            "destino": "Colegio Nuestra Sra. del Huerto",
+            "direccion_a_ir": "11 de Septiembre 646, Pergamino, Provincia de Buenos Aires",
+            "duracionAuto": 55.0,
+            "distanciaAuto": 234.7,
+            "duracioncaminando": 71.4,
+            "distanciacaminando": 99.1,
             "ciudad": "pergamino"
         },
         {
-            "origen": "padre ghio 14",
-            "destino": "Siria 153",
-            "duracionAuto": 92.0,
-            "distanciaAuto": 619.6,
-            "duracioncaminando": 257.3,
-            "distanciacaminando": 357.4,
-            "ciudad": "junin"
+            "origen": "larrea 1342",
+            "destino": "Escuela Primaria N\u00b0 17",
+            "direccion_a_ir": "Castelli 1579, Pergamino, Provincia de Buenos Aires, Argentina",
+            "duracionAuto": 86.4,
+            "distanciaAuto": 406.8,
+            "duracioncaminando": 290.2,
+            "distanciacaminando": 403.0,
+            "ciudad": "pergamino"
         },
         {
-            "origen": "sargento cabral 14",
-            "destino": "Siria 153",
-            "duracionAuto": 57.1,
-            "distanciaAuto": 475.9,
-            "duracioncaminando": 342.7,
-            "distanciacaminando": 475.9,
-            "ciudad": "junin"
+            "origen": "larrea 143",
+            "destino": "Escuela Primaria N\u00b018",
+            "direccion_a_ir": "Golondrinas y Calandrias, Pergamino, Provincia de Buenos Aires, Argentina",
+            "duracionAuto": 247.6,
+            "distanciaAuto": 1398.5,
+            "duracioncaminando": 1007.1,
+            "distanciacaminando": 1398.7,
+            "ciudad": "pergamino"
         },
         {
-            "origen": "9 de julio 567",
-            "destino": "Av. Arias 475",
-            "duracionAuto": 122.8,
-            "distanciaAuto": 1290.0,
-            "duracioncaminando": 601.4,
-            "distanciacaminando": 835.3,
-            "ciudad": "Junin"
+            "origen": "francia 143",
+            "destino": "E.E.S.T N1 \"Bme Mitre\"",
+            "direccion_a_ir": "Av. de Mayo 1425, Pergamino, Provincia de Buenos Aires, Argentina",
+            "duracionAuto": 50.4,
+            "distanciaAuto": 303.8,
+            "duracioncaminando": 218.7,
+            "distanciacaminando": 303.8,
+            "ciudad": "pergamino"
         }
     ],
     "lista": [
         "francia 1535",
-        "larrea 1494",
-        "padre ghio 14",
-        "sargento cabral 14",
-        "9 de julio 567"
+        "merced  904",
+        "larrea 1342",
+        "larrea 143",
+        "francia 143"
     ]
 }

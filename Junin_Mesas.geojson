@@ -1,40 +1,418 @@
 {
-"type": "FeatureCollection",
-"name": "Junin Mesas",
-"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
-"features": [
-{ "type": "Feature", "properties": { "Name": "Escuela De Educación Primaria Nº40 \"José Hernández\"", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.9599638, -34.5720308 ] } },
-{ "type": "Feature", "properties": { "Name": "Escuela De Educación Primaria Nº30 \"25 De Mayo\"", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.9418923, -34.5742783 ] } },
-{ "type": "Feature", "properties": { "Name": "José Hernández 262", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.965548, -34.5978756 ] } },
-{ "type": "Feature", "properties": { "Name": "Siria 153", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.9516869, -34.5801193 ] } },
-{ "type": "Feature", "properties": { "Name": "Discépolo 488", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.9429436, -34.6015252 ] } },
-{ "type": "Feature", "properties": { "Name": "Almte Brown 140", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.9538886, -34.5935684 ] } },
-{ "type": "Feature", "properties": { "Name": "Carlos Tejedor 27", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.9378905, -34.5903666 ] } },
-{ "type": "Feature", "properties": { "Name": "Ramón Falcón 136", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.9415926, -34.5942208 ] } },
-{ "type": "Feature", "properties": { "Name": "Av. Arias 475", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.9364763, -34.5894379 ] } },
-{ "type": "Feature", "properties": { "Name": "Escuela Primaria Nº41 \"Hipólito Yrigoyen\"", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.938994, -34.574574 ] } },
-{ "type": "Feature", "properties": { "Name": "Escuela Primaria N° 19", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.9558307, -34.5884805 ] } },
-{ "type": "Feature", "properties": { "Name": "Escuela Primaria N° 18", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.947321, -34.576443 ] } },
-{ "type": "Feature", "properties": { "Name": "Escuela Primaria N° 12", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.932718, -34.582639 ] } },
-{ "type": "Feature", "properties": { "Name": "Escuela Primaria N° 7", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.9514633, -34.5984242 ] } },
-{ "type": "Feature", "properties": { "Name": "ESCUELA EGB Nº21 \"INTENDENTE DE LA SOTA", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.969273760501203, -34.585057491695601 ] } },
-{ "type": "Feature", "properties": { "Name": "Escuela Primaria N° 3", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.9502125, -34.5866235 ] } },
-{ "type": "Feature", "properties": { "Name": "Escuela Primaria N° 2", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.9428617, -34.5847605 ] } },
-{ "type": "Feature", "properties": { "Name": "Escuela Primaria N° 1", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.9469702, -34.5942877 ] } },
-{ "type": "Feature", "properties": { "Name": "Int. Borchex 119", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.9396426, -34.5991155 ] } },
-{ "type": "Feature", "properties": { "Name": "Dr. M. Lebensohn 1125", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.9227811, -34.5829471 ] } },
-{ "type": "Feature", "properties": { "Name": "Almafuerte 308", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.9535306, -34.5897702 ] } },
-{ "type": "Feature", "properties": { "Name": "Gral. Paz 90", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.9452269, -34.5909446 ] } },
-{ "type": "Feature", "properties": { "Name": "Escuela Secundaria N° 9", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.953558, -34.5901784 ] } },
-{ "type": "Feature", "properties": { "Name": "Instituto del Profesorado Junín", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.9447281, -34.5926359 ] } },
-{ "type": "Feature", "properties": { "Name": "Pringles 981", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.9451005, -34.572408 ] } },
-{ "type": "Feature", "properties": { "Name": "Escuela De Educación Primaria Nº35 \"Paula Albarracin\"", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.9525351, -34.614428 ] } },
-{ "type": "Feature", "properties": { "Name": "Calle de los Ceibos", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.8420893, -34.7613016 ] } },
-{ "type": "Feature", "properties": { "Name": "Avenida San Martin", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.8626705, -34.508139 ] } },
-{ "type": "Feature", "properties": { "Name": "Escuela De Educación Primaria Nº30 \"25 De Mayo\"", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.9418923, -34.5742783 ] } },
-{ "type": "Feature", "properties": { "Name": "Av. Padre Respuela 195", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.9545324, -34.6005476 ] } },
-{ "type": "Feature", "properties": { "Name": "Escuela De Educación Primaria Nº49", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.9358865, -34.5683849 ] } },
-{ "type": "Feature", "properties": { "Name": "Escuela De Educación Primaria Nº35 \"Paula Albarracin\"", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.9525351, -34.614428 ] } },
-{ "type": "Feature", "properties": { "Name": "Escuela De Educación Estética", "description": null }, "geometry": { "type": "Point", "coordinates": [ -60.9486304, -34.5931479 ] } }
-]
+    "type": "FeatureCollection",
+    "name": "Junin Mesas",
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        }
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Escuela De Educación Primaria Nº40 \"José Hernández\"",
+                "Direccion": "Vuelta de Obligado 151-199, Junín, Provincia de Buenos Aires"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.9599638,
+                    -34.5720308
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Escuela De Educación Primaria Nº30 \"25 De Mayo\"",
+                "Direccion": "Juan José Paso y Fleming , Junín , Provincia de Buenos Aires"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.9418923,
+                    -34.5742783
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Jardín De Infantes Nº909 \"José Hernández\"",
+                "Direccion": "José Hernández 262, Junín, Provincia de Buenos Aires"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.965548,
+                    -34.5978756
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Escuela De Educación Primaria Nº16 \"General Manuel Belgrano\"",
+                "Direccion": "Siria/Cabrera y Pres. Quintana 153, Junín, Provincia de Buenos Aires"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.9516869,
+                    -34.5801193
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "E.E.S.T. Nº 2 Patricias Argentinas",
+                "Direccion": "Discépolo 448, Junín, Provincia de Buenos Aires"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.9429436,
+                    -34.6015252
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Colegio Secundario San Jorge",
+                "Direccion": "Almte. Brown 134, Junín, Provincia de Buenos Aires"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.9538886,
+                    -34.5935684
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Colegio Marianista de Junín",
+                "Direccion": "Carlos Tejedor 27, Junín, Provincia de Buenos Aires"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.9378905,
+                    -34.5903666
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Escuela De Educación Primaria Nº24 \"Justo José De Urquiza\"",
+                "Direccion": "Ramón Falcón 136"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.9415926,
+                    -34.5942208
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Escuela Primaria N°22 Centenario",
+                "Direccion": "Av. Arias 475"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.9364763,
+                    -34.5894379
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Escuela Primaria Nº41 \"Hipólito Yrigoyen\"",
+                "Direccion": "Irlanda y Berutti , Junín, Provincia de Buenos Aires"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.938994,
+                    -34.574574
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Escuela De Educación Primaria Nº19 \"Florentino Ameghino\"",
+                "Direccion": "Ameghino 829 "
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.9558307,
+                    -34.5884805
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Escuela De Educación Primaria Nº18 \"Domingo Faustino Sarmiento\"",
+                "Direccion": "Siria 428, Junín, Provincia de Buenos Aires"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.947321,
+                    -34.576443
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Escuela Primaria N°12 \"Juan Bautista Alberdi\"",
+                "Direccion": "Pringles 203-247, Junín, Provincia de Buenos Aires"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.932718,
+                    -34.582639
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Escuela Primaria N° 7 \"Antártida Argentina\"",
+                "Direccion": "Sadi Carnot 150-102, Junín, Provincia de Buenos Aires"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.9514633,
+                    -34.5984242
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Escuela De Educación Primaria Nº21 \"Intendente De La Sota\"",
+                "Direccion": "Arquímedes 1280, Junín, Provincia de Buenos Aires"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.969273760501203,
+                    -34.585057491695601
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Escuela Primaria N° 3",
+                "Direccion": "Av. Rivadavia 393, Junín, Provincia de Buenos Aires, Argentina"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.9502125,
+                    -34.5866235
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Escuela De Educación Primaria Nº2 \"General José de San Martín\"",
+                "Direccion": "Leandro N. Alem 347, Junín, Provincia de Buenos Aires, Argentina"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.9428617,
+                    -34.5847605
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Escuela Primaria N° 1",
+                "Direccion": "Álvarez Rodríguez 27, Junín, Provincia de Buenos Aires"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.9469702,
+                    -34.5942877
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Escuela de Educación Secundaria Nº 7 \"Mayor Alfredo J.L. Arrieta\"",
+                "Direccion": "Int. Borchex 119, Junin, Provincia de Buenos Aires, Argentina"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.9396426,
+                    -34.5991155
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Dr. M. Lebensohn 1125",
+                "Direccion": null
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.9227811,
+                    -34.5829471
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Escuela Normal Superior",
+                "Direccion": "Almafuerte 308, Junín, Provincia de Buenos Aires, Argentina"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.9535306,
+                    -34.5897702
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Colegio La Santa Unión de los Sagrados Corazones",
+                "Direccion": "Gral. Paz 90, Junín, Provincia de Buenos Aires, Argentina"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.9452269,
+                    -34.5909446
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Instituto del Profesorado Junín",
+                "Direccion": "Av. Arias 70, Junín, Provincia de Buenos Aires"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.9447281,
+                    -34.5926359
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Centro De Formación Profesional Nº402",
+                "Direccion": "Pringles 995, Junín, Provincia de Buenos Aires"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.9451005,
+                    -34.572408
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Escuela De Educación Primaria Nº35 \"Paula Albarracin\"",
+                "Direccion": "RN7 Km 258, Junín, Provincia de Buenos Aires"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.9525351,
+                    -34.614428
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Escuela De Educación Primaria Nº30 \"25 De Mayo\"",
+                "Direccion": "Paso y Fleming, Junín, Provincia de Buenos Aires"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.9418923,
+                    -34.5742783
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Instituto Secundario Padre Respuela",
+                "Direccion": "Av. Padre Respuela 195, Junín, Provincia de Buenos Aires"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.9545324,
+                    -34.6005476
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Escuela De Educación Primaria Nº49",
+                "Direccion": "Democracia 1118, Junín, Provincia de Buenos Aires"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.9358865,
+                    -34.5683849
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Name": "Escuela De Educación Estética",
+                "Direccion": "Francia 95, Junín, Provincia de Buenos Aires"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -60.9486304,
+                    -34.5931479
+                ]
+            }
+        }
+    ]
 }
