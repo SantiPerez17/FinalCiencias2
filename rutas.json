@@ -89,6 +89,106 @@
             "duracioncaminando": 84.5,
             "distanciacaminando": 117.3,
             "ciudad": "junin"
+        },
+        {
+            "origen": "padre ghio 43",
+            "destino": "Escuela De Educaci\u00f3n Primaria N\u00ba16 \"General Manuel Belgrano\"",
+            "direccion_a_ir": "Siria/Cabrera y Pres. Quintana 153, Jun\u00edn, Provincia de Buenos Aires",
+            "duracionAuto": 80.9,
+            "distanciaAuto": 573.6,
+            "duracioncaminando": 224.1,
+            "distanciacaminando": 311.3,
+            "ciudad": "junin"
+        },
+        {
+            "origen": "padre ghio 14",
+            "destino": "Escuela De Educaci\u00f3n Primaria N\u00ba16 \"General Manuel Belgrano\"",
+            "direccion_a_ir": "Siria/Cabrera y Pres. Quintana 153, Jun\u00edn, Provincia de Buenos Aires",
+            "duracionAuto": 92.0,
+            "distanciaAuto": 619.6,
+            "duracioncaminando": 257.3,
+            "distanciacaminando": 357.4,
+            "ciudad": "junin"
+        },
+        {
+            "origen": "padre ghio 33",
+            "destino": "Escuela De Educaci\u00f3n Primaria N\u00ba16 \"General Manuel Belgrano\"",
+            "direccion_a_ir": "Siria/Cabrera y Pres. Quintana 153, Jun\u00edn, Provincia de Buenos Aires",
+            "duracionAuto": 84.6,
+            "distanciaAuto": 588.9,
+            "duracioncaminando": 235.2,
+            "distanciacaminando": 326.7,
+            "ciudad": "junin"
+        },
+        {
+            "origen": "francia 14",
+            "destino": "Escuela 10",
+            "direccion_a_ir": "Blvd. Ameghino 91, Pergamino, Provincia de Buenos Aires",
+            "duracionAuto": 66.5,
+            "distanciaAuto": 625.2,
+            "duracioncaminando": 204.1,
+            "distanciacaminando": 283.4,
+            "ciudad": "pergamino"
+        },
+        {
+            "origen": "francia -454",
+            "destino": "E.E.S.T N1 \"Bme Mitre\"",
+            "direccion_a_ir": "Av. de Mayo 1425, Pergamino, Provincia de Buenos Aires, Argentina",
+            "duracionAuto": 47.9,
+            "distanciaAuto": 399.3,
+            "duracioncaminando": 72.6,
+            "distanciacaminando": 100.9,
+            "ciudad": "pergamino"
+        },
+        {
+            "origen": "bartolome mitre 659",
+            "destino": "Escuela especial 503",
+            "direccion_a_ir": "Bartolom\u00e9 Mitre 600, Pergamino, Provincia de Buenos Aires, Argentina",
+            "duracionAuto": 3.5,
+            "distanciaAuto": 14.4,
+            "duracioncaminando": 10.4,
+            "distanciacaminando": 14.4,
+            "ciudad": "pergamino"
+        },
+        {
+            "origen": "bartolome mitre 659000000000000",
+            "destino": "Escuela Primaria N\u00b01 \"Pte. Julio A. Roca\"",
+            "direccion_a_ir": "Merced 618, Pergamino, Provincia de Buenos Aires",
+            "duracionAuto": 144.0,
+            "distanciaAuto": 1043.8,
+            "duracioncaminando": 175.9,
+            "distanciacaminando": 244.3,
+            "ciudad": "pergamino"
+        },
+        {
+            "origen": "francia 14444444444444444",
+            "destino": "Escuela primaria 64",
+            "direccion_a_ir": "Monteagudo 2058, Pergamino, Provincia de Buenos Aires, Argentina",
+            "duracionAuto": 125.5,
+            "distanciaAuto": 972.1,
+            "duracioncaminando": 514.1,
+            "distanciacaminando": 714.0,
+            "ciudad": "pergamino"
+        },
+        {
+            "origen": "francia 155555555555",
+            "destino": "Escuela primaria 64",
+            "direccion_a_ir": "Monteagudo 2058, Pergamino, Provincia de Buenos Aires, Argentina",
+            "duracionAuto": 125.5,
+            "distanciaAuto": 972.1,
+            "duracioncaminando": 514.1,
+            "distanciacaminando": 714.0,
+            "ciudad": "pergamino"
+        },
+        {
+            "origen": "francia 1555",
+            "destino": "Escuela Primaria N\u00b0 17",
+            "direccion_a_ir": "Castelli 1579, Pergamino, Provincia de Buenos Aires, Argentina",
+            "duracionAuto": 113.5,
+            "distanciaAuto": 576.2,
+            "duracioncaminando": 358.4,
+            "distanciacaminando": 497.8,
+            "ciudad": "pergamino"
         }
     ],
     "lista": [
@@ -100,6 +200,16 @@
         "francia 1423",
         "francia 1534",
         "francia 600",
-        "padre ghio 134"
+        "padre ghio 134",
+        "padre ghio 43",
+        "padre ghio 14",
+        "padre ghio 33",
+        "francia 14",
+        "francia -454",
+        "bartolome mitre 659",
+        "bartolome mitre 659000000000000",
+        "francia 14444444444444444",
+        "francia 155555555555",
+        "francia 1555"
     ]
 }

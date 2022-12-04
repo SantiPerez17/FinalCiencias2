@@ -4,7 +4,7 @@ import CalculoRutas
 
 
 
-datosMaps = []
+datosMaps = [0,0,0]
 
 class VentanaEjemplo:
     def __init__(self, master):
@@ -40,18 +40,24 @@ class VentanaEjemplo:
     def buscar(self):
         if not (self.cuadroCalle.get()) or not (self.cuadroNumero.get()) or not (self.cuadroCiudad.get()):
             self.labelResultado = Label(self.miFrame,text='Complete los campos.')
+
             self.botonSaludo.grid(row=3, column=0)
             self.botonSaludo1.grid(row=4, column=0)
             self.labelResultado.grid(row=5,column=0)
+
+            self.ocultar()
+            datosMaps.clear()
+
+            
         else:
-            r=CalculoRutas.Inicializar(self.cuadroCiudad.get(), self.cuadroCalle.get(), self.cuadroNumero.get())
-            if not r is None:
+            r=CalculoRutas.Inicializar(self.cuadroCiudad.get(), self.cuadroCalle.get(), str(abs(int(self.cuadroNumero.get()))))
+            if r != None:
                 self.botonSaludo.grid(row=3, column=0)
                 self.botonSaludo1.grid(row=4, column=0)
                 print(r)
-                datosMaps.append(r[0])
-                datosMaps.append(r[1])
-                datosMaps.append(r[3])
+                datosMaps[0]=r[0]
+                datosMaps[1]=r[1]
+                datosMaps[2]=r[3]
                 self.labelOrigen = Label(self.miFrame,text = 'Origen: ' + r[0].capitalize())
                 self.labelDestino = Label(self.miFrame,text = 'Destino: ' + r[1])
                 self.labelDireccion = Label(self.miFrame,text = 'Direccion Destino: ' + r[2])
@@ -68,16 +74,41 @@ class VentanaEjemplo:
                 self.labelTiempoRespuesta.grid(row=10, column=0)
 
             else:
+                self.ocultar()
+                datosMaps.clear()
                 self.botonSaludo.grid(row=3, column=0)
                 self.botonSaludo1.grid(row=4, column=0)
                 self.labelResultado = Label(self.miFrame,text='No se encontró el domicilio')
-                self.labelResultado.grid(row=4,column=0)
+                self.labelResultado.grid(row=5,column=0)
+                
 
 
     def abrirMaps(self):
-        CalculoRutas.abrir_maps(datosMaps[0],datosMaps[1],datosMaps[2])
-        datosMaps.clear()
+        if len(datosMaps)==0:
+            self.botonSaludo.grid(row=3, column=0)
+            self.botonSaludo1.grid(row=4, column=0)
+            self.labelResultado = Label(self.miFrame,text='No se encontró el domicilio')
+            self.labelResultado.grid(row=5,column=0)
+        elif not (self.cuadroCalle.get()) or not (self.cuadroNumero.get()) or not (self.cuadroCiudad.get()):
+            self.labelResultado = Label(self.miFrame,text='Complete los campos.')
 
+            self.botonSaludo.grid(row=3, column=0)
+            self.botonSaludo1.grid(row=4, column=0)
+            self.labelResultado.grid(row=5,column=0)
+        else:
+            CalculoRutas.abrir_maps(datosMaps[0],datosMaps[1],datosMaps[2])
+
+
+
+    
+    def ocultar(self):
+        self.labelOrigen.grid_remove()
+        self.labelDestino.grid_remove()
+        self.labelDireccion.grid_remove()
+        self.labelAuto.grid_remove()
+        self.labelCaminando.grid_remove()
+        self.labelTiempoRespuesta.grid_remove()
+        
 
 root = Tk()
 root.geometry("1200x600")

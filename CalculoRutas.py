@@ -32,6 +32,8 @@ def Inicializar(ciu, nom, num):
         numerocalle+","+nombrecalle+","+ciudad+"&format=json&limit=1"
     # asignamos a res el pedido de tipo get que le hacemos a la API con la url anterior
     res = requests.get(url)
+
+    print(res.json())
     # Si no encuentra la calle cierra el programa y muestra que no se encontró el domicilio
     if res.json() == []:
         print('')
@@ -120,6 +122,12 @@ def normalizarDistancia(distancia):
     else:
         return str(round(distancia,None)) + " metros"
 
+def normalizarDuracion(duracion):
+    if round(duracion/60,3) >= 1:
+        return str(round(duracion/60,1)) + " minutos"
+    else:
+        return str(round(duracion,None)) + " segundos"
+
 # Funcion que calcula la distancia y el tiempo del recorrido en base a un numero 'n'
 def calc_Tiempo_Distancia(n,ciudad):
     with open('data_temporal.json') as file:  # Leemos el archivo 'data_temporal.json'
@@ -190,9 +198,9 @@ def calc_Tiempo_Distancia(n,ciudad):
                 destino,
                 dir_destino,
                 ciudad,
-                str(round(duracionauto/60,None)) + ' minutos.',
+                normalizarDuracion(duracionauto),
                 normalizarDistancia(distanciaauto),
-                str(round(duracioncaminando/60,None)) + " minutos.", 
+                normalizarDuracion(duracioncaminando), 
                 normalizarDistancia(distanciacaminando)]
 
 def abrir_maps(origen,destino, ciu):
