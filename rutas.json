@@ -79,6 +79,36 @@
             "duracionCaminando": 205.2,
             "distanciaCaminando": 285.0,
             "ciudad": "pergamino"
+        },
+        {
+            "origen": "francia 1434",
+            "destino": "Escuela Primaria N\u00b0 17",
+            "direccion_a_ir": "Castelli 1579, Pergamino, Provincia de Buenos Aires, Argentina",
+            "duracionAuto": 118.9,
+            "distanciaAuto": 693.7,
+            "duracionCaminando": 277.6,
+            "distanciaCaminando": 385.5,
+            "ciudad": "pergamino"
+        },
+        {
+            "origen": "tucuman 53",
+            "destino": "Escuela De Educaci\u00f3n Primaria N\u00ba16 \"General Manuel Belgrano\"",
+            "direccion_a_ir": "Siria/Cabrera y Pres. Quintana 153, Jun\u00edn, Provincia de Buenos Aires",
+            "duracionAuto": 53.6,
+            "distanciaAuto": 461.5,
+            "duracionCaminando": 306.2,
+            "distanciaCaminando": 425.3,
+            "ciudad": "junin"
+        },
+        {
+            "origen": "francia 1343",
+            "destino": "Escuela Primaria N\u00b0 17",
+            "direccion_a_ir": "Castelli 1579, Pergamino, Provincia de Buenos Aires, Argentina",
+            "duracionAuto": 83.5,
+            "distanciaAuto": 408.6,
+            "duracionCaminando": 212.4,
+            "distanciaCaminando": 295.0,
+            "ciudad": "pergamino"
         }
     ],
     "lista": [
@@ -89,6 +119,9 @@
         "francia 143",
         "francia 1534",
         "sargento cabral 19",
-        "francia 15"
+        "francia 15",
+        "francia 1434",
+        "tucuman 53",
+        "francia 1343"
     ]
 }
