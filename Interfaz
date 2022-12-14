@@ -100,7 +100,7 @@ class VentanaEjemplo:
             print("AAAAAAAAAAAAA", datosMaps)
         # Se abre un navegador para comparar los resultados con el servicio de GoogleMaps
             webbrowser.open('https://www.google.com.ar/maps/dir/' +
-                    str(datosMaps[0])+' '+str(datosMaps[2])+'/'+str(datosMaps[1])+' '+str(datosMaps[2]))
+                    str(datosMaps[0]).capitalize()+', '+str(datosMaps[2]).capitalize()+',Buenos Aires'+'/'+str(datosMaps[1]).capitalize()+', '+str(datosMaps[2]).capitalize()+',Buenos Aires')
 
 
 
