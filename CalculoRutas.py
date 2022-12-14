@@ -143,10 +143,19 @@ def calc_Tiempo_Distancia(n,ciudad):
             # En base al perfil(en auto o caminando) nos fijamos el cliente inicializado anteriormente los asignamos
             # a su variable correspondiente donde nos fijaremos donde está el tiempo y distancia.
 
-            distydurauto = client.directions(
-                coords, profile='driving-car')['routes'][0]['summary']
-            distydurcaminando = client.directions(
-                coords, profile='foot-walking')['routes'][0]['summary']
+            pedidoAuto = client.directions(
+                coords, profile='driving-car')
+            distydurauto = pedidoAuto['routes'][0]['summary']
+
+            #print(pedidoAuto)
+            
+            pedidoCaminando = client.directions(
+                coords, profile='foot-walking')
+
+            distydurcaminando = pedidoCaminando['routes'][0]['summary']
+
+            #print(pedidoCaminando)
+
             duracionauto = distydurauto['duration']
             distanciaauto = distydurauto['distance']
             duracioncaminando = distydurcaminando['duration']
@@ -158,8 +167,8 @@ def calc_Tiempo_Distancia(n,ciudad):
             elemento = rut['rutas'][index]
             duracionauto = elemento['duracionAuto']
             distanciaauto = elemento['distanciaAuto']
-            duracioncaminando = elemento['duracioncaminando']
-            distanciacaminando = elemento['distanciacaminando']
+            duracioncaminando = elemento['duracionCaminando']
+            distanciacaminando = elemento['distanciaCaminando']
         
         origen = datos['origen']
         destino = datos['destino']
@@ -176,8 +185,8 @@ def calc_Tiempo_Distancia(n,ciudad):
                 "direccion_a_ir" : dir_destino,
                 "duracionAuto": duracionauto,
                 "distanciaAuto": distanciaauto,
-                "duracioncaminando" : duracioncaminando,
-                "distanciacaminando" : distanciacaminando,
+                "duracionCaminando" : duracioncaminando,
+                "distanciaCaminando" : distanciacaminando,
                 "ciudad": ciu,
             }
             rutaa['rutas'].append(nueva)
@@ -186,12 +195,12 @@ def calc_Tiempo_Distancia(n,ciudad):
                 json.dump(rutaa, file, indent=4)
 
         # Muestra en consola de resultados
-        print(
-            f'\nOrigen: {origen.capitalize()} --> Destino: {destino.capitalize()} \nDireccion : {dir_destino} \nAuto : [tiempo {round(duracionauto/60,None)} minutos y distancia {normalizarDistancia(distanciaauto)} ] \nCaminando : [tiempo {round(duracioncaminando/60,None)} minutos y distancia {normalizarDistancia(distanciacaminando)}] ')
+        #print(
+        #    f'\nOrigen: {origen.capitalize()} --> Destino: {destino.capitalize()} \nDireccion : {dir_destino} \nAuto : [tiempo {round(duracionauto/60,None)} minutos y distancia {normalizarDistancia(distanciaauto)} ] \nCaminando : [tiempo {round(duracioncaminando/60,None)} minutos y distancia {normalizarDistancia(distanciacaminando)}] ')
 
         
-        with open('data_temporal.json', 'r+') as f:
-            f.truncate()
+        #with open('data_temporal.json', 'r+') as f:
+        #    f.truncate()
 
         #return f"\nOrigen: {origen.capitalize()} --> Destino: {destino.capitalize()} \nDireccion : {dir_destino} \nAuto : [tiempo {round(duracionauto/60,None)} minutos y distancia {normalizarDistancia(distanciaauto)}] \nCaminando : [tiempo {round(duracioncaminando/60,None)} minutos y distancia {normalizarDistancia(distanciacaminando)}] "
         return [origen,
@@ -203,7 +212,3 @@ def calc_Tiempo_Distancia(n,ciudad):
                 normalizarDuracion(duracioncaminando), 
                 normalizarDistancia(distanciacaminando)]
 
-def abrir_maps(origen,destino, ciu):
-    # Se abre un navegador para comparar los resultados con el servicio de GoogleMaps
-    webbrowser.open('https://www.google.com.ar/maps/dir/' +
-        str(origen)+' '+ciu+'/'+str(destino)+' '+ciu)

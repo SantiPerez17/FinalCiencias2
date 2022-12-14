@@ -1,10 +1,11 @@
 # decodigo.com
 from tkinter import *
+import webbrowser
 import CalculoRutas
 
 
 
-datosMaps = [0,0,0]
+datosMaps = ['','','']
 
 class VentanaEjemplo:
     def __init__(self, master):
@@ -62,7 +63,7 @@ class VentanaEjemplo:
                 self.labelDestino = Label(self.miFrame,text = 'Destino: ' + r[1])
                 self.labelDireccion = Label(self.miFrame,text = 'Direccion Destino: ' + r[2])
                 self.labelAuto = Label(self.miFrame,text = 'Auto [Duracion: ' + r[4] + ', Distancia: ' + r[5] +']')
-                self.labelCaminando = Label(self.miFrame,text = 'Caminando [Duración: ' + r[6] + ', Distancia: ' + r[7])
+                self.labelCaminando = Label(self.miFrame,text = 'Caminando [Duración: ' + r[6] + ', Distancia: ' + r[7] + ']')
                 self.labelTiempoRespuesta = Label(self.miFrame,text = 'Respuesta' + r[8])
                 #self.labelResultado = Label(self.miFrame, text=CalculoRutas.Inicializar(
                 #    self.cuadroCiudad.get(), self.cuadroCalle.get(), self.cuadroNumero.get()))
@@ -96,7 +97,10 @@ class VentanaEjemplo:
             self.botonSaludo1.grid(row=4, column=0)
             self.labelResultado.grid(row=5,column=0)
         else:
-            CalculoRutas.abrir_maps(datosMaps[0],datosMaps[1],datosMaps[2])
+            print("AAAAAAAAAAAAA", datosMaps)
+        # Se abre un navegador para comparar los resultados con el servicio de GoogleMaps
+            webbrowser.open('https://www.google.com.ar/maps/dir/' +
+                    str(datosMaps[0])+' '+str(datosMaps[2])+'/'+str(datosMaps[1])+' '+str(datosMaps[2]))
 
 
 
