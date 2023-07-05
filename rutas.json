@@ -109,16 +109,6 @@
             "duracionCaminando": 212.4,
             "distanciaCaminando": 295.0,
             "ciudad": "pergamino"
-        },
-        {
-            "origen": "libanesa 14",
-            "destino": "Escuela De Educaci\u00f3n Primaria N\u00ba16 \"General Manuel Belgrano\"",
-            "direccion_a_ir": "Siria/Cabrera y Pres. Quintana 153, Jun\u00edn, Provincia de Buenos Aires",
-            "duracionAuto": 49.1,
-            "distanciaAuto": 408.9,
-            "duracionCaminando": 294.4,
-            "distanciaCaminando": 408.9,
-            "ciudad": "junin"
         }
     ],
     "lista": [
@@ -132,7 +122,6 @@
         "francia 15",
         "francia 1434",
         "tucuman 53",
-        "francia 1343",
-        "libanesa 14"
+        "francia 1343"
     ]
 }
