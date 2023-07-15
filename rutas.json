@@ -109,6 +109,26 @@
             "duracionCaminando": 212.4,
             "distanciaCaminando": 295.0,
             "ciudad": "pergamino"
+        },
+        {
+            "origen": "francia 1536",
+            "destino": "Escuela Primaria N\u00b0 17",
+            "direccion_a_ir": "Castelli 1579, Pergamino, Provincia de Buenos Aires, Argentina",
+            "duracionAuto": 117.1,
+            "distanciaAuto": 596.4,
+            "duracionCaminando": 343.9,
+            "distanciaCaminando": 477.6,
+            "ciudad": "pergamino"
+        },
+        {
+            "origen": "francia 44",
+            "destino": "Escuela 10",
+            "direccion_a_ir": "Blvd. Ameghino 91, Pergamino, Provincia de Buenos Aires",
+            "duracionAuto": 68.6,
+            "distanciaAuto": 601.5,
+            "duracionCaminando": 221.1,
+            "distanciaCaminando": 307.1,
+            "ciudad": "pergamino"
         }
     ],
     "lista": [
@@ -122,6 +142,8 @@
         "francia 15",
         "francia 1434",
         "tucuman 53",
-        "francia 1343"
+        "francia 1343",
+        "francia 1536",
+        "francia 44"
     ]
 }

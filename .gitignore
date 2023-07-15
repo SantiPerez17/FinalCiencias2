@@ -1,3 +1,5 @@
 
 h.py
 *.pyc
+.venv
+.__pycache__
