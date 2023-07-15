@@ -2,7 +2,9 @@ from tkinter import *
 import webbrowser
 import CalculoRutas
 
-datosMaps = ['', '', '']
+
+
+datosMaps = ['','','']
 
 class VentanaEjemplo:
     def __init__(self, master):
@@ -12,85 +14,104 @@ class VentanaEjemplo:
         self.miFrame = Frame(root, width=1200, height=600)
         self.miFrame.pack()
 
-        # Etiqueta y campo de entrada para la ciudad
         self.labelCiudad = Label(self.miFrame, text="Ciudad:")
         self.labelCiudad.grid(row=0, column=0)
         self.cuadroCiudad = Entry(self.miFrame)
         self.cuadroCiudad.grid(row=0, column=1)
 
-        # Etiqueta y campo de entrada para la calle
         self.labelCalle = Label(self.miFrame, text="Calle:")
         self.labelCalle.grid(row=1, column=0)
         self.cuadroCalle = Entry(self.miFrame)
         self.cuadroCalle.grid(row=1, column=1)
 
-        # Etiqueta y campo de entrada para el número
         self.labelNumero = Label(self.miFrame, text="Número:")
         self.labelNumero.grid(row=2, column=0)
         self.cuadroNumero = Entry(self.miFrame)
         self.cuadroNumero.grid(row=2, column=1)
 
-        # Botón para realizar la búsqueda de la ruta
-        self.botonSaludo = Button(self.miFrame, text="Buscar", command=self.buscar)
+        self.botonSaludo = Button(
+            self.miFrame, text="Buscar", command=self.buscar)
         self.botonSaludo.grid(row=3, column=0)
 
-        # Botón para abrir Google Maps con la ruta encontrada
-        self.botonSaludo1 = Button(self.miFrame, text="Abrir Maps", command=self.abrirMaps)
+        self.botonSaludo1 = Button(
+            self.miFrame, text="AbrirMaps", command=self.abrirMaps)
         self.botonSaludo1.grid(row=4, column=0)
 
     def buscar(self):
-        # Verificar si se completaron todos los campos
-        if not self.cuadroCalle.get() or not self.cuadroNumero.get() or not self.cuadroCiudad.get():
-            self.labelResultado = Label(self.miFrame, text='Complete los campos.')
-            self.labelResultado.grid(row=5, column=0)
+        if not (self.cuadroCalle.get()) or not (self.cuadroNumero.get()) or not (self.cuadroCiudad.get()):
+            self.labelResultado = Label(self.miFrame,text='Complete los campos.')
+
+            self.botonSaludo.grid(row=3, column=0)
+            self.botonSaludo1.grid(row=4, column=0)
+            self.labelResultado.grid(row=5,column=0)
+
             self.ocultar()
             datosMaps.clear()
+
+            
         else:
-            # Llamar a la función de cálculo de ruta y obtener los resultados
-            resultados = CalculoRutas.Inicializar(self.cuadroCiudad.get(), self.cuadroCalle.get(), str(abs(int(self.cuadroNumero.get()))))
-            if resultados:
-                # Almacenar los resultados en la lista datosMaps
-                datosMaps[0] = resultados[0]
-                datosMaps[1] = resultados[1]
-                datosMaps[2] = resultados[3]
-
-                # Mostrar los resultados en etiquetas en la ventana
-                self.labelOrigen = Label(self.miFrame, text='Origen: ' + resultados[0].capitalize())
-                self.labelDestino = Label(self.miFrame, text='Destino: ' + resultados[1])
-                self.labelDireccion = Label(self.miFrame, text='Dirección Destino: ' + resultados[2])
-                self.labelAuto = Label(self.miFrame, text='Auto [Duración: ' + resultados[4] + ', Distancia: ' + resultados[5] + ']')
-                self.labelCaminando = Label(self.miFrame, text='Caminando [Duración: ' + resultados[6] + ', Distancia: ' + resultados[7] + ']')
-
+            r=CalculoRutas.Inicializar(self.cuadroCiudad.get(), self.cuadroCalle.get(), str(abs(int(self.cuadroNumero.get()))))
+            if len(r) == 8:
+                self.botonSaludo.grid(row=3, column=0)
+                self.botonSaludo1.grid(row=4, column=0)
+                print(r)
+                datosMaps[0]=r[0]
+                datosMaps[1]=r[1]
+                datosMaps[2]=r[3]
+                self.labelOrigen = Label(self.miFrame,text = 'Origen: ' + r[0].capitalize())
+                self.labelDestino = Label(self.miFrame,text = 'Destino: ' + r[1])
+                self.labelDireccion = Label(self.miFrame,text = 'Direccion Destino: ' + r[2])
+                self.labelAuto = Label(self.miFrame,text = 'Auto [Duracion: ' + r[4] + ', Distancia: ' + r[5] +']')
+                self.labelCaminando = Label(self.miFrame,text = 'Caminando [Duración: ' + r[6] + ', Distancia: ' + r[7] + ']')
+                self.labelTiempoRespuesta = Label(self.miFrame,text = 'Respuesta' + r[8])
+                #self.labelResultado = Label(self.miFrame, text=CalculoRutas.Inicializar(
+                #    self.cuadroCiudad.get(), self.cuadroCalle.get(), self.cuadroNumero.get()))
                 self.labelOrigen.grid(row=5, column=0)
                 self.labelDestino.grid(row=6, column=0)
                 self.labelDireccion.grid(row=7, column=0)
                 self.labelAuto.grid(row=8, column=0)
                 self.labelCaminando.grid(row=9, column=0)
+                self.labelTiempoRespuesta.grid(row=10, column=0)
+
             else:
                 self.ocultar()
                 datosMaps.clear()
-                self.labelResultado = Label(self.miFrame, text='No se encontró el domicilio')
-                self.labelResultado.grid(row=5, column=0)
+                self.botonSaludo.grid(row=3, column=0)
+                self.botonSaludo1.grid(row=4, column=0)
+                self.labelResultado = Label(self.miFrame,text='No se encontró el domicilio')
+                self.labelResultado.grid(row=5,column=0)
+                
+
 
     def abrirMaps(self):
-        # Verificar si se encontró una ruta válida
-        if len(datosMaps) == 0:
-            self.labelResultado = Label(self.miFrame, text='No se encontró el domicilio')
-            self.labelResultado.grid(row=5, column=0)
-        elif not self.cuadroCalle.get() or not self.cuadroNumero.get() or not self.cuadroCiudad.get():
-            self.labelResultado = Label(self.miFrame, text='Complete los campos.')
-            self.labelResultado.grid(row=5, column=0)
-        else:
-            # Abrir Google Maps en el navegador web con la ruta encontrada
-            webbrowser.open('https://www.google.com.ar/maps/dir/' +
-                            str(datosMaps[0]).capitalize() + ', ' + str(datosMaps[2]).capitalize() + ', Buenos Aires/' +
-                            str(datosMaps[1]).capitalize() + ', ' + str(datosMaps[2]).capitalize() + ', Buenos Aires')
+        if len(datosMaps)==0:
+            self.botonSaludo.grid(row=3, column=0)
+            self.botonSaludo1.grid(row=4, column=0)
+            self.labelResultado = Label(self.miFrame,text='No se encontró el domicilio')
+            self.labelResultado.grid(row=5,column=0)
+        elif not (self.cuadroCalle.get()) or not (self.cuadroNumero.get()) or not (self.cuadroCiudad.get()):
+            self.labelResultado = Label(self.miFrame,text='Complete los campos.')
 
+            self.botonSaludo.grid(row=3, column=0)
+            self.botonSaludo1.grid(row=4, column=0)
+            self.labelResultado.grid(row=5,column=0)
+        else:
+            print("AAAAAAAAAAAAA", datosMaps)
+        # Se abre un navegador para comparar los resultados con el servicio de GoogleMaps
+            webbrowser.open('https://www.google.com.ar/maps/dir/' +
+                    str(datosMaps[0]).capitalize()+', '+str(datosMaps[2]).capitalize()+',Buenos Aires'+'/'+str(datosMaps[1]).capitalize()+', '+str(datosMaps[2]).capitalize()+',Buenos Aires')
+
+
+
+    
     def ocultar(self):
-        # Ocultar las etiquetas de los resultados en la ventana
-        for attr_name in ['labelOrigen', 'labelDestino', 'labelDireccion', 'labelAuto', 'labelCaminando']:
-            if hasattr(self, attr_name):
-                getattr(self, attr_name).grid_remove()
+        self.labelOrigen.grid_remove()
+        self.labelDestino.grid_remove()
+        self.labelDireccion.grid_remove()
+        self.labelAuto.grid_remove()
+        self.labelCaminando.grid_remove()
+        self.labelTiempoRespuesta.grid_remove()
+        
 
 root = Tk()
 root.geometry("1200x600")

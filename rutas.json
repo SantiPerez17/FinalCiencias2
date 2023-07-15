@@ -129,6 +129,46 @@
             "duracionCaminando": 221.1,
             "distanciaCaminando": 307.1,
             "ciudad": "pergamino"
+        },
+        {
+            "origen": "francia 1553",
+            "destino": "Escuela Primaria N\u00b0 17",
+            "direccion_a_ir": "Castelli 1579, Pergamino, Provincia de Buenos Aires, Argentina",
+            "duracionAuto": 115.1,
+            "distanciaAuto": 584.8,
+            "duracionCaminando": 352.2,
+            "distanciaCaminando": 489.2,
+            "ciudad": "pergamino"
+        },
+        {
+            "origen": "larrea 100",
+            "destino": "Escuela Primaria N\u00b0 17",
+            "direccion_a_ir": "Castelli 1579, Pergamino, Provincia de Buenos Aires, Argentina",
+            "duracionAuto": 105.8,
+            "distanciaAuto": 534.4,
+            "duracionCaminando": 151.5,
+            "distanciaCaminando": 210.5,
+            "ciudad": "pergamino"
+        },
+        {
+            "origen": "francia 123",
+            "destino": "E.E.S.T N1 \"Bme Mitre\"",
+            "direccion_a_ir": "Av. de Mayo 1425, Pergamino, Provincia de Buenos Aires, Argentina",
+            "duracionAuto": 54.8,
+            "distanciaAuto": 318.6,
+            "duracionCaminando": 229.4,
+            "distanciaCaminando": 318.6,
+            "ciudad": "pergamino"
+        },
+        {
+            "origen": "italia 123",
+            "destino": "Escuela Primaria N\u00ba 22 \"Domingo Faustino Sarmiento\"",
+            "direccion_a_ir": "Av. de Mayo, 1165, Pergamino, Buenos Aires, Argentina",
+            "duracionAuto": 73.2,
+            "distanciaAuto": 586.6,
+            "duracionCaminando": 393.6,
+            "distanciaCaminando": 546.7,
+            "ciudad": "pergamino"
         }
     ],
     "lista": [
@@ -144,6 +184,10 @@
         "tucuman 53",
         "francia 1343",
         "francia 1536",
-        "francia 44"
+        "francia 44",
+        "francia 1553",
+        "larrea 100",
+        "francia 123",
+        "italia 123"
     ]
 }
